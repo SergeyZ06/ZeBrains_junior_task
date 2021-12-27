@@ -23,8 +23,8 @@ def ocr(image):
 app = Flask(__name__)
 
 
-@app.route("/text-recognition", methods=['POST'], )
-def similar_recognition():
+@app.route("/text-recognition", methods=['POST'])
+def text_recognition():
     image = request.files.get('image')
     text = ocr(image.read())
     text = ' '.join(text)

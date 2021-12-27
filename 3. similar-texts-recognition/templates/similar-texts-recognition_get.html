@@ -1,0 +1,31 @@
+<!doctype html>
+<title>similar-recognition</title>
+
+  <h1>Similar-texts-recognition Service</h1>
+  <p>This service is to provide the similarity calculation of two texts.</p>
+  <p>Final metric will be among a zero value and a one value:</p>
+  <p>0 - there is no similarity between two texts at all;</p>
+  <p>1 - there is almost no difference between main words' sets.</p>
+  <p>Please, send two texts with POST method at this URL.</p>
+  <p></p>
+  <p>Similarity metric will be represented below</p>
+
+  <hr>
+  <h2>Text 1</h2>
+  {% if text_1 %}
+    <p>{{ text_1 }}</p>
+  {% else %}
+    <p style="color:red">No text has been received</p>
+  {% endif %}
+
+  <hr>
+  <h2>Text 2</h2>
+  {% if text_2 %}
+    <p>{{ text_2 }}</p>
+  {% else %}
+    <p style="color:red">No text has been received</p>
+  {% endif %}
+
+  <hr>
+  <h2>Similarity Metric</h2>
+  <p> {{ metric_similarity }} </p>

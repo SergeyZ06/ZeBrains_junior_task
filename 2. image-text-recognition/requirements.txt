@@ -1,0 +1,3 @@
+requests~=2.25.1
+easyocr~=1.4.1
+Flask~=2.0.1
